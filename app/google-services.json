@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "622486732789",
+    "project_id": "solveo-75797",
+    "storage_bucket": "solveo-75797.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622486732789:android:4a10115d2adc1b619f6abc",
+        "android_client_info": {
+          "package_name": "com.example.solveo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIvqj4H6t384FhQ09WIGtsOEcrqlQvYAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
