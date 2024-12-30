@@ -96,6 +96,9 @@ dependencies {
     implementation("com.google.firebase:firebase-database")
     implementation("com.google.firebase:firebase-analytics")
 
+    implementation ("com.google.firebase:firebase-database:20.2.2")
+
+
     implementation("com.github.bumptech.glide:glide:4.15.1")
     implementation ("com.google.firebase:firebase-storage:21.0.1")
 

@@ -12,4 +12,8 @@ public class User {
         this.fullName = fullName;
         this.email = email;
     }
+
+    public String getFullname(){
+        return fullName;
+    }
 }

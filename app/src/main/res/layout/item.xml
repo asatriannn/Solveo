@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="#F3F6FA"
+    android:clipToOutline="true"
+    android:elevation="4dp"
+    app:cardCornerRadius="30dp"> <!-- Transparent background for the CardView -->
+
+    <TextView
+        android:id="@+id/textViewModule"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/cardbg"
+        android:fontFamily="@font/fredoka_one"
+        android:gravity="center"
+        android:text="Default Title"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+</androidx.cardview.widget.CardView>

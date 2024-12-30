@@ -5,15 +5,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class HomeActivity extends AppCompatActivity {
 
     ImageView profile;
+    ImageView read;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,23 +22,28 @@ public class HomeActivity extends AppCompatActivity {
         // Set the layout first
         setContentView(R.layout.activity_home);
 
-        // Initialize the ImageView after the layout is set
+        // Initialize views
         profile = findViewById(R.id.profile);
+        read = findViewById(R.id.read);
 
-        // Set a click listener for the profile ImageView
-        profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
-                startActivity(intent);
-            }
+        // Set listeners
+        profile.setOnClickListener(view -> {
+            Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+            startActivity(intent);
+        });
+
+        read.setOnClickListener(view -> {
+            Intent intent = new Intent(HomeActivity.this, ReadActivity.class);
+            startActivity(intent);
         });
 
         // Enable Edge-to-Edge content
-        EdgeToEdge.enable(this);
+        WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            v.setPadding(insets.getInsets(WindowInsetsCompat.Type.systemBars()).left,
+                    insets.getInsets(WindowInsetsCompat.Type.systemBars()).top,
+                    insets.getInsets(WindowInsetsCompat.Type.systemBars()).right,
+                    insets.getInsets(WindowInsetsCompat.Type.systemBars()).bottom);
             return insets;
         });
     }
